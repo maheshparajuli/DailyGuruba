@@ -1,11 +1,11 @@
 // App.js
 import React from "react";
-import Header from "./Components/Header.js";
-import Home from "./Components/Home.js";
-import About from "./Components/About.js";
-import Footer from "./Components/Footer.js";
+import Header from "./Components/Header";
+import Home from "./Components/Home";
+import About from "./Components/About";
+import Footer from "./Components/Footer";
 
-import "./styles/App.css";
+import "./App.css";
 
 function App() {
   return (
