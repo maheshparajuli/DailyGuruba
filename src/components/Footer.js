@@ -3,9 +3,8 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer id="footer" className="footer">
-      <p>Contact: your-email@example.com</p>
-      <p>&copy; 2024 My Static Website</p>
+    <footer className="footer">
+      <p>&copy; 2024 Mahesh Parajuli. All Rights Reserved.</p>
     </footer>
   );
 }
