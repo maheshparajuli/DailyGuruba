@@ -1,10 +1,10 @@
 // Footer.js
-import React from 'react';
+import React from 'react'; // Optional, if you have separate styles
 
 function Footer() {
   return (
     <footer className="footer">
-      <p>&copy; 2024 Mahesh Parajuli. All Rights Reserved.</p>
+      <p>&copy; {new Date().getFullYear()} Mahesh Parajuli. All rights reserved.</p>
     </footer>
   );
 }

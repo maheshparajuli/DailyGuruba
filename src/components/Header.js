@@ -1,15 +1,16 @@
 // Header.js
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 function Header() {
   return (
     <header className="header">
-      <h1>Mahesh Parajuli</h1>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+      <nav className="header-nav">
+        <Link to="/" className="nav-link">Home</Link>
+        <Link to="/projects" className="nav-link">Projects</Link>
+        <Link to="/about" className="nav-link">About</Link>
+        <Link to="/contact" className="nav-link">Contacts</Link>
       </nav>
     </header>
   );
