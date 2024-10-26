@@ -1,54 +1,65 @@
 /* App.css */
+
+/* Overall app container styles */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+  margin: 0; /* Remove default margin */
 }
 
+.app-container {
+  flex: 1; /* This allows the content to grow and push the footer down */
+  display: flex;
+  flex-direction: row;
+  padding-top: 60px; /* Adjust this if header height changes */
+}
+
+/* Style for the main sections */
+.section {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Header styling */
 .header {
-  background-color: #282c34;
-  padding: 20px;
-  text-align: center;
-  color: white;
-}
-
-.header nav a {
-  margin: 0 15px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.header nav a:hover {
-  text-decoration: underline;
-}
-
-section {
-  padding: 20px;
-  text-align: center;
-}
-
-.projects ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.projects li {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center the nav in the header */
+  background-color: #f5f5f5; /* Light gray for the header */
   padding: 10px 0;
+  position: fixed; /* Fixed positioning for the header */
+  width: 100%;
+  top: 0;
+  z-index: 10; /* Ensure it stays above other content */
 }
 
-.footer {
-  background-color: #282c34;
-  color: white;
-  padding: 10px;
-  text-align: center;
+/* Navigation styling */
+.header-nav {
+  display: flex; /* Flexbox layout for nav links */
+  gap: 20px; /* Space between the links */
 }
 
-h2 {
+/* Link styles */
+.nav-link {
+  text-decoration: none;
   color: #333;
+  font-weight: bold;
+  padding: 10px; /* Optional: Add some padding for better click area */
+  transition: color 0.3s ease;
 }
 
-p {
-  color: #666;
+.nav-link:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+/* Footer styling */
+.footer {
+  background-color: #4CAF50; /* Colorful footer background */
+  color: white; /* White text color for contrast */
+  position: relative; /* Relative positioning allows it to stick at the bottom */
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
 }
