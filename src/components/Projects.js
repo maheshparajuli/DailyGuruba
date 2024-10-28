@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 
 
 function Projects() {
-  
+  // State to keep track of which project's documentation is selected
   const [selectedProject, setSelectedProject] = useState(null);
 
-  
-const projectDocs = {
+  // Sample documentation for projects
+  const projectDocs = {
     project1: (
       <div className="doc-content">
         <h2>Project 1: Weather Prediction</h2>
@@ -44,7 +44,6 @@ const projectDocs = {
 
   return (
     <div className="projects-container">
-      <h1>Projects</h1>
       <div className="projects-list">
         {/* List of projects */}
         <ul>
@@ -55,14 +54,16 @@ const projectDocs = {
       </div>
 
       {/* Popup for Documentation */}
-      {selectedProject && (
-        <div className="popup">
-          <div className="popup-content">
-            <span className="close" onClick={() => setSelectedProject(null)}>&times;</span>
-            {projectDocs[selectedProject]}
+      <div className="popup-container">
+        {selectedProject && (
+          <div className="popup">
+            <div className="popup-content">
+              <span className="close" onClick={() => setSelectedProject(null)}>&times;</span>
+              {projectDocs[selectedProject]}
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }
