@@ -8,6 +8,8 @@ import Projects from './Components/Projects';
 import Contacts from './Components/Contacts';
 import Footer from './Components/Footer';
 import './App.css';
+import "./Projects.css";
+
 
 
 function App() {
