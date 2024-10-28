@@ -1,68 +1,70 @@
 .projects-container {
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  }
-  
-  .projects-list {
-    margin-right: 20px;
-  }
-  
-  .projects-list ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .projects-list li {
-    cursor: pointer;
-    padding: 10px;
-    background-color: #f0f0f0;
-    margin-bottom: 5px;
-    width: 200px;
-    text-align: center;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .projects-list li:hover {
-    background-color: #d0d0ff;
-  }
-  
-  .popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    width: 400px; /* Adjust as needed */
-  }
-  
-  .popup-content {
-    position: relative;
-  }
-  
-  .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 24px;
-    color: #333;
-  }
-  
-  .doc-content h2 {
-    color: #333399;
-  }
-  
-  .doc-content ul {
-    padding-left: 20px;
-  }
-  
-  .doc-content li {
-    margin: 5px 0;
-  }
-  
+  display: flex;
+  justify-content: space-between; /* Space between the project list and popup */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.projects-list {
+  flex: 1; /* Take up available space */
+  margin-right: 20px; /* Space between list and popup */
+}
+
+.projects-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.projects-list li {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f0f0f0;
+  margin-bottom: 5px;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.projects-list li:hover {
+  background-color: #d0d0ff;
+}
+
+.popup-container {
+  flex: 2; /* Allow the popup to take up more space */
+  display: flex;
+  justify-content: center; /* Center the popup horizontally */
+}
+
+.popup {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px; /* Adjust as needed */
+  border-radius: 8px;
+}
+
+.popup-content {
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+}
+
+.doc-content h2 {
+  color: #333399;
+}
+
+.doc-content ul {
+  padding-left: 20px;
+}
+
+.doc-content li {
+  margin: 5px 0;
+}
