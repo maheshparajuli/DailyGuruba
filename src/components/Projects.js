@@ -19,14 +19,42 @@ const Projects = () => {
     return (
         <div className="projects-container">
             <h2>Projects by Semester</h2>
-            <div className="semester-grid">
-                {[...Array(8)].map((_, i) => (
+            
+            {/* Row 1 */}
+            <div className="semester-row">
+                {[1, 2, 3].map((num) => (
                     <div
-                        key={i}
-                        className={`semester-container color-${i + 1}`}
-                        onClick={() => handleClick(i + 1)}
+                        key={num}
+                        className={`semester-container color-${num}`}
+                        onClick={() => handleClick(num)}
                     >
-                        Sem {i + 1}
+                        Sem {num}
+                    </div>
+                ))}
+            </div>
+            
+            {/* Row 2 */}
+            <div className="semester-row">
+                {[4, 5, 6].map((num) => (
+                    <div
+                        key={num}
+                        className={`semester-container color-${num}`}
+                        onClick={() => handleClick(num)}
+                    >
+                        Sem {num}
+                    </div>
+                ))}
+            </div>
+            
+            {/* Row 3 */}
+            <div className="semester-row">
+                {[7, 8].map((num) => (
+                    <div
+                        key={num}
+                        className={`semester-container color-${num}`}
+                        onClick={() => handleClick(num)}
+                    >
+                        Sem {num}
                     </div>
                 ))}
             </div>
