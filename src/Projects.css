@@ -2,13 +2,15 @@
   padding: 20px;
 }
 
-.semester-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+.semester-row {
+  display: flex;
   gap: 15px;
+  justify-content: flex-start;
+  margin-bottom: 15px;
 }
 
 .semester-container {
+  flex: 1;
   padding: 20px;
   border-radius: 8px;
   color: #fff;
