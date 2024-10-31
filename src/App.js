@@ -9,6 +9,8 @@ import Contacts from './Components/Contacts';
 import Footer from './Components/Footer';
 import './App.css';
 import "./Projects.css";
+import "./About.css";
+
 
 
 
