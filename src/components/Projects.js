@@ -24,16 +24,40 @@ const Projects = () => {
     return (
         <div className="projects-container">
             <h2>Projects by Semester</h2>
-            <div className="semester-row">
-                {[2, 3, 4, 5, 6, 7, 8].map((num) => (
+            <div className="semester-container">
+                {/* First Row: Sem 2, Sem 3, Sem 4 */}
+                <div className="semester-row">
+                    {[2, 3, 4].map((num) => (
+                        <div
+                            key={num}
+                            className="sem-box"
+                            onClick={() => handleClick(num)}
+                        >
+                            Sem {num}
+                        </div>
+                    ))}
+                </div>
+                {/* Second Row: Sem 5, Sem 6, Sem 7 */}
+                <div className="semester-row">
+                    {[5, 6, 7].map((num) => (
+                        <div
+                            key={num}
+                            className="sem-box"
+                            onClick={() => handleClick(num)}
+                        >
+                            Sem {num}
+                        </div>
+                    ))}
+                </div>
+                {/* Third Row: Sem 8 */}
+                <div className="semester-row">
                     <div
-                        key={num}
-                        className={`semester-container`}
-                        onClick={() => handleClick(num)}
+                        className="sem-box"
+                        onClick={() => handleClick(8)}
                     >
-                        Sem {num}
+                        Sem 8
                     </div>
-                ))}
+                </div>
             </div>
 
             {selectedSemester && (
