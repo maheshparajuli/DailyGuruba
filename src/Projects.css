@@ -48,4 +48,9 @@
   padding: 20px; /* Padding inside popup */
   border-radius: 5px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for popup */
+  width: 80%; /* Set width to 80% of the viewport */
+  max-width: 600px; /* Maximum width of the popup */
+  height: auto; /* Adjust height to fit content */
+  max-height: 80%; /* Set max height to 80% of the viewport */
+  overflow-y: auto; /* Add scroll if content exceeds max height */
 }

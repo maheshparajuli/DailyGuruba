@@ -1,0 +1,62 @@
+.about-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    background-color: #f0f4f8; /* Light background color */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+.about-container:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+h2 {
+    text-align: center; /* Centered title */
+    color: #333; /* Dark color for title */
+    font-family: 'Arial', sans-serif; /* Font for title */
+    margin-bottom: 20px; /* Space below title */
+}
+
+.about-content {
+    margin-bottom: 20px; /* Space below content */
+}
+
+.about-text {
+    font-family: 'Georgia', serif; /* Serif font for body text */
+    line-height: 1.6; /* Improved line height for readability */
+    color: #555; /* Darker color for body text */
+}
+
+.skills-section {
+    margin-top: 30px; /* Space above skills section */
+    padding: 15px;
+    background-color: #ffffff; /* White background for skills section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.skills-section h3 {
+    color: #333; /* Dark color for skills heading */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.skills-section ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.skills-section li {
+    background-color: #e7f3fe; /* Light blue background for each skill */
+    margin: 5px 0; /* Space between items */
+    padding: 10px; /* Padding for items */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.3s; /* Transition for hover effect */
+}
+
+.skills-section li:hover {
+    background-color: #d0e6ff; /* Darker blue on hover */
+    transform: scale(1.02); /* Slight zoom effect on hover */
+}

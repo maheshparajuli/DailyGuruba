@@ -31,7 +31,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #0a9269;
+  background-color: #e226c9;
   padding: 10px 0;
   position: fixed;
   width: 100%;
@@ -57,7 +57,7 @@ body {
 
 /* Footer styling to keep it at the screen's bottom */
 .footer {
-  background-color: #af4c82;
+  background-color: #e226c9;
   color: white;
   text-align: center;
   padding: 15px 0;
