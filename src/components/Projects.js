@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 
+
 const Projects = () => {
     const [selectedSemester, setSelectedSemester] = useState(null);
     const projects = {
-        1: ['Project A1', 'Project B1'],
         2: ['Project A2', 'Project B2'],
-        // Add more projects for each semester as needed
+        3: ['Project A3', 'Project B3'],
+        4: ['Project A4', 'Project B4'],
+        5: ['Project A5', 'Project B5'],
+        6: ['Project A6', 'Project B6'],
+        7: ['Project A7', 'Project B7'],
+        8: ['Project A8', 'Project B8'],
     };
 
     const handleClick = (semester) => {
@@ -19,36 +24,8 @@ const Projects = () => {
     return (
         <div className="projects-container">
             <h2>Projects by Semester</h2>
-            
-            {/* Row 1 */}
             <div className="semester-row">
-                {[1, 2, 3].map((num) => (
-                    <div
-                        key={num}
-                        className={`semester-container color-${num}`}
-                        onClick={() => handleClick(num)}
-                    >
-                        Sem {num}
-                    </div>
-                ))}
-            </div>
-            
-            {/* Row 2 */}
-            <div className="semester-row">
-                {[4, 5, 6].map((num) => (
-                    <div
-                        key={num}
-                        className={`semester-container color-${num}`}
-                        onClick={() => handleClick(num)}
-                    >
-                        Sem {num}
-                    </div>
-                ))}
-            </div>
-            
-            {/* Row 3 */}
-            <div className="semester-row">
-                {[7, 8].map((num) => (
+                {[2, 3, 4, 5, 6, 7, 8].map((num) => (
                     <div
                         key={num}
                         className={`semester-container color-${num}`}
