@@ -4,13 +4,13 @@ import React, { useState } from 'react';
 const Projects = () => {
     const [selectedSemester, setSelectedSemester] = useState(null);
     const projects = {
-        2: ['Project A2', 'Project B2'],
-        3: ['Project A3', 'Project B3'],
-        4: ['Project A4', 'Project B4'],
-        5: ['Project A5', 'Project B5'],
-        6: ['Project A6', 'Project B6'],
-        7: ['Project A7', 'Project B7'],
-        8: ['Project A8', 'Project B8'],
+        2: ['Project A2', 'Project B2', 'Project C2'],
+        3: ['Project A3', 'Project B3', 'Project C3'],
+        4: ['Project A4', 'Project B4', 'Project C4'],
+        5: ['Project A5', 'Project B5', 'Project C5'],
+        6: ['Project A6', 'Project B6', 'Project C6'],
+        7: ['Project A7', 'Project B7', 'Project C7'],
+        8: ['Project A8', 'Project B8', 'Project C8'],
     };
 
     const handleClick = (semester) => {
@@ -28,7 +28,7 @@ const Projects = () => {
                 {[2, 3, 4, 5, 6, 7, 8].map((num) => (
                     <div
                         key={num}
-                        className={`semester-container color-${num}`}
+                        className={`semester-container`}
                         onClick={() => handleClick(num)}
                     >
                         Sem {num}
