@@ -10,6 +10,7 @@ import Footer from './Components/Footer';
 import './App.css';
 import "./Projects.css";
 import "./About.css";
+import "./Home.css";
 
 
 
