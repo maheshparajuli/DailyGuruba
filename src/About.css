@@ -1,62 +1,138 @@
-.about-container {
+
+/* About.css */
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes skillsSlideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .about-container {
     max-width: 800px;
-    margin: auto;
-    padding: 30px;
-    background-color: #f0f4f8; /* Light background color */
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
-}
-
-.about-container:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
-}
-
-h2 {
-    text-align: center; /* Centered title */
-    color: #333; /* Dark color for title */
-    font-family: 'Arial', sans-serif; /* Font for title */
-    margin-bottom: 20px; /* Space below title */
-}
-
-.about-content {
-    margin-bottom: 20px; /* Space below content */
-}
-
-.about-text {
-    font-family: 'Georgia', serif; /* Serif font for body text */
-    line-height: 1.6; /* Improved line height for readability */
-    color: #555; /* Darker color for body text */
-}
-
-.skills-section {
-    margin-top: 30px; /* Space above skills section */
-    padding: 15px;
-    background-color: #ffffff; /* White background for skills section */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-.skills-section h3 {
-    color: #333; /* Dark color for skills heading */
-    margin-bottom: 10px; /* Space below heading */
-}
-
-.skills-section ul {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
-}
-
-.skills-section li {
-    background-color: #e7f3fe; /* Light blue background for each skill */
-    margin: 5px 0; /* Space between items */
-    padding: 10px; /* Padding for items */
-    border-radius: 4px; /* Rounded corners */
-    transition: background-color 0.3s, transform 0.3s; /* Transition for hover effect */
-}
-
-.skills-section li:hover {
-    background-color: #d0e6ff; /* Darker blue on hover */
-    transform: scale(1.02); /* Slight zoom effect on hover */
-}
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+    animation: fadeInUp 0.7s ease-out;
+    position: relative;
+  }
+  
+  .about-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #007bff;
+  }
+  
+  .about-content {
+    display: flex;
+    animation: fadeInUp 0.9s ease-out;
+  }
+  
+  .about-text {
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .about-text p {
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: fadeInUp 0.7s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+  
+  .skills-section {
+    margin-top: 2rem;
+    animation: skillsSlideIn 0.9s ease-out;
+  }
+  
+  .skills-section h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  
+  .skills-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #28a745;
+  }
+  
+  .skills-section ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .skills-section li {
+    background-color: #e9ecef;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    color: #495057;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .skills-section li:hover {
+    background-color: #007bff;
+    color: white;
+    animation: pulse 0.5s;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .about-container {
+      padding: 1rem;
+    }
+  
+    .about-content {
+      flex-direction: column;
+    }
+  }
