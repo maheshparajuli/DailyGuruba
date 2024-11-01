@@ -20,13 +20,13 @@ const Home = () => {
             src: photo2,
             date: '2023-02-14',
             caption: 'NCDC2024',
-            story: 'This was during the presentation of our project '
+            story: 'This was during the presentation of project at National Conference on Data and Computing Organized by Department of Mathematics,Kathmandu University.' 
         },
         {
             src: photo3,
             date: '2023-04-05',
-            caption: 'Spring Blossoms',
-            story: 'The spring season brought stunning blossoms and vibrant colors. I spent a day in the park, capturing the beauty of nature as everything bloomed and came to life.'
+            caption: 'Project Agni Netra',
+            story: 'This was a moment capture during the hackathon organized by Department of environment science and enginnering.Me with my group members Phiroj kumar sah and Sushan Adhikari were testing ml model at this instant.'
         },
     ];
 
@@ -55,7 +55,7 @@ const Home = () => {
         <div className={`home-container ${isLoaded ? 'fade-in' : ''}`}>
             <div className="bio-section slide-in-left">
                 <h1>About Me</h1>
-                <p>This is a short bio about me. I am passionate about...</p>
+                <p>Iam third year student currently studying Bsc.Computational Mathematics in Department of Mathematics at Kathmandu University. Iam trying to make habit of coding projects regularly and tyring to learn newer things.</p>
             </div>
 
             <div className="news-articles">

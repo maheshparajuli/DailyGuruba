@@ -27,32 +27,11 @@ body {
 }
 
 /* Header styling */
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #e226c9;
-  padding: 10px 0;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 10;
-}
 
-/* Navigation styling */
-.header-nav {
-  display: flex;
-  gap: 60px;
-}
-/* Style for specific nav links */
-.nav-link {
-  text-decoration: none;
-  font-size: 20px; /* Adjust this size as needed */
-}
 
-/* nav a {
-  text-decoration: none;
-} */
+
+
+
 
 
 /* Footer styling to keep it at the screen's bottom */
