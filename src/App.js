@@ -11,6 +11,7 @@ import './App.css';
 import "./Projects.css";
 import "./About.css";
 import "./Home.css";
+import "./Header.css";
 
 
 
