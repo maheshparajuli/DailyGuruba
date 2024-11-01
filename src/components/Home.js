@@ -13,14 +13,14 @@ const Home = () => {
         {
             src: photo1,
             date: '2023-01-10',
-            caption: 'New Year Celebration',
-            story: 'This year New Year celebration was filled with joy, laughter, and unforgettable moments shared with family and friends. We enjoyed fireworks, delicious food, and a night of dancing.'
+            caption: 'Mathematical games',
+            story: 'This picture was clicked during an mathematical games event organized by INFINITY,a departmental program of Department of mathematics,Kathmandu University.'
         },
         {
             src: photo2,
             date: '2023-02-14',
-            caption: 'Valentine\'s Day Out',
-            story: 'Valentines Day was a beautiful day spent exploring the city with my loved one. We visited our favorite spots, enjoyed a lovely dinner, and made memories to cherish forever.'
+            caption: 'NCDC2024',
+            story: 'This was during the presentation of our project '
         },
         {
             src: photo3,
