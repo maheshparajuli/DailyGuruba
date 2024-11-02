@@ -26,25 +26,7 @@ body {
   width: 100%;
 }
 
-/* Header styling */
 
-
-
-
-
-
-
-/* Footer styling to keep it at the screen's bottom */
-.footer {
-  background-color: #e226c9;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-}
 .home-container {
   max-width: 800px;
   margin: auto;
