@@ -1,80 +1,85 @@
 import React, { useState } from 'react';
 
+function Projects() {
+  const [activeProject, setActiveProject] = useState(null);
 
-const Projects = () => {
-    const [selectedSemester, setSelectedSemester] = useState(null);
-    const projects = {
-        2: ['Project A2', 'Project B2', 'Project C2'],
-        3: ['Project A3', 'Project B3', 'Project C3'],
-        4: ['Project A4', 'Project B4', 'Project C4'],
-        5: ['Project A5', 'Project B5', 'Project C5'],
-        6: ['Project A6', 'Project B6', 'Project C6'],
-        7: ['Project A7', 'Project B7', 'Project C7'],
-        8: ['Project A8', 'Project B8', 'Project C8'],
-    };
+  const projects = [
+    {
+      id: 1,
+      name: "E-Commerce Website",
+      overview: "A full-stack e-commerce platform built with React and Node.js. Features include user authentication, product catalog, shopping cart, and payment integration. Implemented responsive design and REST API.",
+      tech: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
+      duration: "3 months",
+      role: "Full Stack Developer"
+    },
+    {
+      id: 2,
+      name: "Weather Dashboard",
+      overview: "Real-time weather application that provides current weather data and forecasts. Integrated with OpenWeatherMap API, featuring dynamic updates and location-based services.",
+      tech: ["JavaScript", "API Integration", "HTML5", "CSS3"],
+      duration: "1 month",
+      role: "Frontend Developer"
+    },
+    {
+      id: 3,
+      name: "Task Management System",
+      overview: "A collaborative task management tool with features like task creation, assignment, progress tracking, and team collaboration. Includes real-time updates and notification system.",
+      tech: ["React", "Firebase", "Material-UI", "Redux"],
+      duration: "2 months",
+      role: "Lead Developer"
+    },
+    {
+      id: 4,
+      name: "Portfolio Website",
+      overview: "Personal portfolio website showcasing projects and skills. Features smooth animations, responsive design, and contact form integration.",
+      tech: ["React", "Tailwind CSS", "Framer Motion"],
+      duration: "3 weeks",
+      role: "Designer & Developer"
+    }
+  ];
 
-    const handleClick = (semester) => {
-        setSelectedSemester(semester);
-    };
+  const toggleProject = (projectId) => {
+    setActiveProject(activeProject === projectId ? null : projectId);
+  };
 
-    const handleClosePopup = () => {
-        setSelectedSemester(null);
-    };
-
-    return (
-        <div className="projects-container">
-            <h2>Projects by Semester</h2>
-            <div className="semester-container">
-                {/* First Row: Sem 2, Sem 3, Sem 4 */}
-                <div className="semester-row">
-                    {[2, 3, 4].map((num) => (
-                        <div
-                            key={num}
-                            className="sem-box"
-                            onClick={() => handleClick(num)}
-                        >
-                            Sem {num}
-                        </div>
+  return (
+    <div className="projects-container">
+      <h1 className="projects-title">My Projects</h1>
+      <div className="projects-grid">
+        {projects.map((project) => (
+          <div key={project.id} className="project-item">
+            <button
+              className={`project-name ${activeProject === project.id ? 'active' : ''}`}
+              onClick={() => toggleProject(project.id)}
+            >
+              {project.name}
+            </button>
+            
+            <div className={`project-details ${activeProject === project.id ? 'show' : ''}`}>
+              <h3>Overview</h3>
+              <p>{project.overview}</p>
+              
+              <div className="project-meta">
+                <div>
+                  <h4>Technologies</h4>
+                  <div className="tech-stack">
+                    {project.tech.map((tech, index) => (
+                      <span key={index} className="tech-tag">{tech}</span>
                     ))}
+                  </div>
                 </div>
-                {/* Second Row: Sem 5, Sem 6, Sem 7 */}
-                <div className="semester-row">
-                    {[5, 6, 7].map((num) => (
-                        <div
-                            key={num}
-                            className="sem-box"
-                            onClick={() => handleClick(num)}
-                        >
-                            Sem {num}
-                        </div>
-                    ))}
+                
+                <div className="project-info">
+                  <p><strong>Duration:</strong> {project.duration}</p>
+                  <p><strong>Role:</strong> {project.role}</p>
                 </div>
-                {/* Third Row: Sem 8 */}
-                <div className="semester-row">
-                    <div
-                        className="sem-box"
-                        onClick={() => handleClick(8)}
-                    >
-                        Sem 8
-                    </div>
-                </div>
+              </div>
             </div>
-
-            {selectedSemester && (
-                <div className="popup">
-                    <div className="popup-content">
-                        <h3>Projects in Sem {selectedSemester}</h3>
-                        <ul>
-                            {projects[selectedSemester]?.map((project, index) => (
-                                <li key={index}>{project}</li>
-                            )) || <li>No projects available</li>}
-                        </ul>
-                        <button onClick={handleClosePopup}>Close</button>
-                    </div>
-                </div>
-            )}
-        </div>
-    );
-};
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default Projects;
