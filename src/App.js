@@ -12,6 +12,7 @@ import "./Projects.css";
 import "./About.css";
 import "./Home.css";
 import "./Header.css";
+import "./Footer.css";
 
 
 
