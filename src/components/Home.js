@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import photo1 from '../assets/photo1.jpg';
 import photo2 from '../assets/photo2.jpg';
 import photo3 from '../assets/photo3.jpg';
+import photo4 from '../assets/photo4.jpg';
 
 const Home = () => {
     const [selectedArticle, setSelectedArticle] = useState(null);
@@ -28,6 +29,14 @@ const Home = () => {
             caption: 'Project Agni Netra',
             story: 'This was a moment capture during the hackathon organized by Department of environment science and enginnering.Me with my group members Phiroj kumar sah and Sushan Adhikari were testing ml model at this instant.'
         },
+        {
+
+            src: photo4,
+            date: '2023-04-05',
+            caption: 'Analysis and Implementation of Pagerank Algorithm',
+            story: 'This was a moment capture during the hackathon organized by Department of environment science and enginnering.Me with my group members Phiroj kumar sah and Sushan Adhikari were testing ml model at this instant.'
+        },
+
     ];
 
     useEffect(() => {
