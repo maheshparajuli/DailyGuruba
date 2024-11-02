@@ -54,8 +54,9 @@ const Home = () => {
     return (
         <div className={`home-container ${isLoaded ? 'fade-in' : ''}`}>
             <div className="bio-section slide-in-left">
-                <h1>About Me</h1>
-                <p>Iam third year student currently studying Bsc.Computational Mathematics in Department of Mathematics at Kathmandu University. Iam trying to make habit of coding projects regularly and tyring to learn newer things.</p>
+                <h1>Hello!</h1>
+                <h3>Its me Mahesh Parajuli.</h3>
+                <p>Welcome to my portfolio.</p>
             </div>
 
             <div className="news-articles">
