@@ -1,56 +1,139 @@
+/* Projects.css */
 .projects-container {
-  text-align: center; /* Center the heading and content */
-  margin: 20px; /* Add some margin around the container */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-.semester-container {
-  display: flex;
-  flex-direction: column; /* Arrange rows vertically */
-  align-items: center; /* Center the rows */
+.projects-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+  animation: fadeIn 0.8s ease-out;
 }
 
-.semester-row {
-  display: flex;
-  justify-content: center; /* Center boxes in each row */
-  margin: 10px 0; /* Add margin between rows */
+.projects-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.sem-box {
-  width: 200px;  
-  height: 100px;  
-  margin: 20px; /* Space between boxes */
-  padding: 30px; /* Padding inside the boxes */
-  background-color: #f0f0f0; /* Background color for the boxes */
-  text-align: center; /* Center the text */
-  cursor: pointer; /* Show pointer cursor on hover */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: shadow */
-  border-radius: 10%; /* Make the box circular */
-  display: flex; /* Use flexbox for centering */
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
+.project-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
+.project-item:hover {
+  transform: translateY(-5px);
+}
 
-.popup {
-  position: fixed; /* Position the popup */
-  top: 0;
-  left: 0;
+.project-name {
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2d3748;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
 }
 
-.popup-content {
-  background-color: white; /* Popup background color */
-  padding: 20px; /* Padding inside popup */
-  border-radius: 5px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for popup */
-  width: 80%; /* Set width to 80% of the viewport */
-  max-width: 600px; /* Maximum width of the popup */
-  height: auto; /* Adjust height to fit content */
-  max-height: 80%; /* Set max height to 80% of the viewport */
-  overflow-y: auto; /* Add scroll if content exceeds max height */
+.project-name:hover {
+  background: #f7fafc;
+}
+
+.project-name.active {
+  border-bottom-color: #4299e1;
+  background: #f7fafc;
+}
+
+.project-details {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-out;
+  padding: 0 1.5rem;
+}
+
+.project-details.show {
+  max-height: 1000px;
+  opacity: 1;
+  padding: 1.5rem;
+}
+
+.project-details h3 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.project-details p {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.project-meta {
+  margin-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1rem;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.tech-tag {
+  background: #ebf8ff;
+  color: #4299e1;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.project-info {
+  margin-top: 1rem;
+}
+
+.project-info p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-container {
+    padding: 1rem;
+  }
+  
+  .projects-title {
+    font-size: 2rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
